@@ -73,3 +73,8 @@ gtest_build/
 gtest/
 
 tmp_build/CMakeLists.txt
+
+# Jetbrains stuff
+/.idea/
+/cmake-build-debug/
+*.DS_Store
