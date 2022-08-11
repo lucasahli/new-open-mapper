@@ -62,6 +62,9 @@ INCLUDE_DIRECTORIES(PUBLIC "${CMAKE_CURRENT_LIST_DIR}/include")
 ################################
 # Define Dependencies
 ################################
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup() #TARGETS
+# CONAN_PKG::opencv
 
 FIND_PACKAGE(OpenCV REQUIRED)
 FIND_PACKAGE(OpenGL REQUIRED)
@@ -74,17 +77,17 @@ INCLUDE_DIRECTORIES(
 
   ${CMAKE_CURRENT_LIST_DIR}/thirdparty/miniglog
 
-  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/include
-  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/
-  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/Thirdparty/DBoW2/DBoW2
-  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/Thirdparty/g2o/g2o/core
-  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/Thirdparty/g2o/g2o/solvers
-  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/Thirdparty/g2o/g2o/stuff
-  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/Thirdparty/g2o/g2o/types
+  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/include
+  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/
+  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/Thirdparty/DBoW2/DBoW2
+  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/Thirdparty/g2o/g2o/core
+  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/Thirdparty/g2o/g2o/solvers
+  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/Thirdparty/g2o/g2o/stuff
+  ${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/Thirdparty/g2o/g2o/types
 )
 
 INCLUDE("${CMAKE_CURRENT_LIST_DIR}/thirdparty/miniglog/CMakeLists.txt")
-INCLUDE("${CMAKE_CURRENT_LIST_DIR}/thirdparty/slam_engine/ORB_SLAM2/CMakeLists.txt")
+INCLUDE("${CMAKE_CURRENT_LIST_DIR}/thirdparty/ORB_SLAM2/CMakeLists.txt")
 
 
 ################################

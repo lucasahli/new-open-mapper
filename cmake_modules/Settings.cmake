@@ -28,7 +28,7 @@ IF(CREATE_SNAP_APP)
 ")
 ELSE()
   SET(PATH_TO_SETTINGS
-  "${CMAKE_CURRENT_LIST_DIR}/../thirdparty/slam_engine/ORB_SLAM2/Vocabulary")
+  "${CMAKE_CURRENT_LIST_DIR}/../thirdparty/ORB_SLAM2/Vocabulary")
   MESSAGE("Path to settings is: " ${PATH_TO_SETTINGS})
 
   IF(EXISTS "${PATH_TO_SETTINGS}/iphone.yaml")

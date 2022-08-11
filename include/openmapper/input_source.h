@@ -75,7 +75,7 @@ class InputSource {
       }
     }
 
-    fps_ = cap.get(CV_CAP_PROP_FPS);
+    fps_ = cap.get(cv::CAP_PROP_FPS);
     if(fps_<1.0){
       LOG(ERROR) << "fps_ is lower than 1.0, setting it to 30 fps";
       fps_ = 30;
